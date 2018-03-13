@@ -1,0 +1,89 @@
+// ----- Personal preference -----
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// ----- Variable Declarations -----
+
+// ----- Styles -----
+body, html {
+  background-color: #2C1B35;
+}
+.table {
+  display: table;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+#decoration, #decoration2, #decoration3 {
+  position: absolute;
+  background-color: yellow;
+  width: 420px;
+  height: 70px;
+  opacity: 0;
+  border-radius: 10px;
+}
+#decoration2 {
+  background-color: magenta;
+}
+#decoration3 {
+  background-color: cyan;
+}
+.leader {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 420px;
+  height: 390px;
+  li {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 70px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(black, 0.1);
+    .list_num {
+      float: left;
+      line-height: 40px;
+      font-size: 18px;
+      color: rgba(black, 0.65);
+      margin: 15px;
+      font-weight: bold;
+      width: 20px;
+      text-align: right;
+      margin-left: 10px;
+    }
+    h2 {
+      display: block;
+      margin: 0;
+      font-size: 18px;
+      line-height: 40px;
+      font-weight: 300;
+      margin-top: 15px;
+      padding-right: 20px;
+      .number {
+        float: right;
+        font-weight: bold;
+        color: rgba(black, 0.65);
+        transition: color 0.3s;
+      }
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin: 15px 20px;
+      margin-left: 0;
+      border-radius: 100%;
+    }
+  }
+}
+
+// ----- Mobile styles -----
+@media only screen 
+  and (max-device-width: 736px) { 
+}

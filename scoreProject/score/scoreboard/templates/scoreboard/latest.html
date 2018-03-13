@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scoreboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="300">
+    <link href="{% static 'scoreboard/css/style.css' %}" rel="stylesheet">
+    <script src = "{% static 'scoreboard/js/style.js' %}"></script>
+     
+  <style>
+    body{
+      background-color: black;
+      background-image:  url("{% static 'scoreboard/img/resized.png' %}") ;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center; 
+      background-size: 800px 1000px; 
+    }
+    
+  </style>
+
+  </head>
+  <body onload="load()" >
+    <div class="center">
+      <div class="table">
+        <div class="table-cell">
+          <ul class="leader">
+            {% if existFirst %}
+            <li>
+              <span class="list_num"></span>
+              <img src="{% static 'scoreboard/img/1.png' %}"/>
+              <h2>{{first.user}}<span class="number nb1">{{first.score}}</span></h2>
+            </li>
+            {% endif %}
+
+            {% if existSecond %}
+            <li>
+              <span class="list_num"></span>
+              <img src="{% static 'scoreboard/img/2.png' %}"/>
+              <h2>{{second.user}}<span class="number">{{second.score}}</span></h2>
+            </li>
+            {% endif %}
+
+            {% if existThird %}
+            <li>
+              <span class="list_num"></span>
+              <img src="{% static 'scoreboard/img/3.png' %}"/>
+              <h2>{{third.user}}<span class="number">{{third.score}}</span></h2>
+            </li>
+            {% endif %}
+            
+            {% if existLast %}
+            {% for other in last %}
+              <li>
+                <span class="list_num"></span>
+                <img src="{% static 'scoreboard/img/4.png' %}"/>
+                <h2>{{other.user}}<span class="number">{{other.score}}</span></h2>
+              </li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+    
+  
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function load()
+    {
+    setTimeout("window.open(self.location, '_self');", 10000);
+    }
+  </script>
+</html>
