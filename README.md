@@ -1,4 +1,7 @@
 # scoreboard
+
+Realtime Leaderboard for a Unity3D based Game, made with Django.
+
 '''
 * le serveur est lancer automatiqument sur 'crontab' par la commande: "python3 /root/django/scoreboard/scoreProject/score/manage.py runserver 0.0.0.0:80
 
